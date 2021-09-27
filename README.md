@@ -5,13 +5,13 @@
 * Paulo Angelo
 * Guilherme 
 * Victor Boaventura Góes Campos
-*
+
  ## Instruções de utilização
  
  ### Requisitos
  Ter java 1.9^ e Gradle 7.11^ e Mysql Server instalado, Utilizamos a IDE Intelij
  
- ###Configurações
+ ##Configurações
  
 Executar os seguintes comandos para gerar o banco: 
 
