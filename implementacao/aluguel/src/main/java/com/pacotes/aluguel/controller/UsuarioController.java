@@ -1,5 +1,8 @@
-package com.pacotes.aluguel.database;
+package com.pacotes.aluguel.controller;
 
+
+import com.pacotes.aluguel.model.Usuario;
+import com.pacotes.aluguel.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +21,7 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public Usuario save(@RequestBody Usuario usuario){
+    public Usuario save(Usuario usuario){
         return usuarioRepository.save(usuario);
     }
 

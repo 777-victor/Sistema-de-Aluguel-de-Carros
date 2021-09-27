@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criar Usuario</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+</head>
+<body class="container">
+<a href="/">Voltar</a>
+
+<h1 class="py-5"> CRUD Usuario </h1>
+<div align="center">
+
+    <form action="#" th:action="@{/usuario}" th:object="${usuario}" method="post">
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input id="nome" placeholder="Digite o nome" required type="text" th:field="*{nome}"
+                   class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="documento">Documento</label>
+            <input id="documento" placeholder="Digite o documento" type="text" th:field="*{documento}"
+                   class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input id="senha" placeholder="Digite a senha" required type="text" th:field="*{senha}"
+                   class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" required th:field="*{tipo}" class="form-control">
+                <option value="" hidden>Selecione o tipo</option>
+                <option value="A">Agente</option>
+                <option value="C">Cliente</option>
+            </select>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Criar Usuario">
+
+    </form>
+</div>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Documento</th>
+        <th>Tipo</th>
+    </tr>
+    <tr th:if="${#lists.isEmpty(usuarios)}">
+        <td colspan="5">No Records found. Add some...!</td>
+    </tr>
+    <tr th:each="user : ${usuarios}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.nome}"></td>
+        <td th:text="${user.documento}"></td>
+        <td th:text="${user.tipo}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

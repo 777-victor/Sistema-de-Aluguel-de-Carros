@@ -1,4 +1,4 @@
-package com.pacotes.aluguel.database;
+package com.pacotes.aluguel.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,9 +22,13 @@ public class Usuario {
 
     private String nome;
 
+    private String senha;
+
     private String documento;
 
     private String endereco;
+
+    private String tipo;
 
 
 }
