@@ -11,7 +11,7 @@
 <body class="container">
 <a href="/">Voltar</a>
 
-<h1 class="py-5"> CRUD Usuario </h1>
+<h1 class="py-5"> Alguel de veiculos </h1>
 <div align="center">
 
     <form action="#" th:action="@{/usuario}" th:object="${usuario}" method="post">
@@ -41,8 +41,7 @@
         </div>
 
         <input type="submit" class="btn btn-primary" value="Criar Usuario">
-        <br/>
-        <br/>
+
     </form>
 </div>
 
@@ -52,7 +51,6 @@
         <th>Nome</th>
         <th>Documento</th>
         <th>Tipo</th>
-        <th> Ação </th>
     </tr>
     <tr th:if="${#lists.isEmpty(usuarios)}">
         <td colspan="5">No Records found. Add some...!</td>
@@ -62,11 +60,7 @@
         <td th:text="${user.nome}"></td>
         <td th:text="${user.documento}"></td>
         <td th:text="${user.tipo}"></td>
-        <td>
-            <a th:href="@{usuario/delete/__${user.id}__}" class="btn btn-danger">Delete</a>
-        </td>
     </tr>
 </table>
-
 </body>
 </html>

@@ -34,4 +34,13 @@ DEFAULT CHARSET=utf8
 COLLATE=utf8_general_ci
 COMMENT='';
 
+create table automovel(	
+	id integer not null,
+	marca varchar(30) DEFAULT NULL,
+	modelo varchar(30) not null,
+	ano int DEFAULT NULL,
+	placa varchar(10)not null,
+	constraint pk_automovel primary key (id)
+);
+
 E então executar a main da classe AluguelApplication.
