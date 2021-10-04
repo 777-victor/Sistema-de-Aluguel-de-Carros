@@ -27,4 +27,12 @@ public class UsuarioService{
     public void delete(Long id) {
         usuarioRepository.deleteById(id);
     }
+
+    public List<Usuario> getByNome(String nome){
+        return usuarioRepository.findByNome(nome);
+    }
+
+    public Usuario getUserById(Long id) {
+        return usuarioRepository.getById(id);
+    }
 }

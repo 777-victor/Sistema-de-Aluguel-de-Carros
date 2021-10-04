@@ -6,7 +6,9 @@
 </head>
 <body>
 <div th:fragment="navLinks">
-    <a href="/">home</a> - <a href="usuario">Usuario</a> - <a href="pedidoForm">Incluir Pedido</a>
+    <a href="usuario">Usuario</a> -
+    <a th:href="@{automovel/__${id}__}">Incluir Pedido</a>
+    <a href="pedido">Lista de Pedidos</a>
 </div>
 </body>
 </html>
